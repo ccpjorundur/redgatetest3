@@ -1,0 +1,3 @@
+CREATE SCHEMA [zsystem]
+AUTHORIZATION [sa]
+GO

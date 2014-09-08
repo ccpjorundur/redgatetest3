@@ -1,0 +1,7 @@
+IF NOT EXISTS (SELECT * FROM master.dbo.syslogins WHERE loginname = N'sa')
+CREATE LOGIN [sa] WITH PASSWORD = 'p@ssw0rd'
+GO
+CREATE USER [sa] FOR LOGIN [sa]
+GO
+DENY BACKUP DATABASE TO [sa]
+DENY BACKUP LOG TO [sa]
