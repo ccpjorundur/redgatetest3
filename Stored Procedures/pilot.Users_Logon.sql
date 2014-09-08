@@ -1,3 +1,4 @@
+
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
@@ -8,6 +9,11 @@ AS
   SET NOCOUNT ON
 
   BEGIN TRY
+DECLARE @a int, @b int, @c int
+SET @a = 1
+SET @b = 2
+SET @c = @a + @b
+
     DECLARE @userID int, @pilotID int, @pilotName nvarchar(200)
     SELECT @userID = userID FROM pilot.users WHERE userName = @userName
     IF @userID IS NULL
@@ -42,5 +48,6 @@ AS
     RETURN -1
   END CATCH
 GO
+
 GRANT EXECUTE ON  [pilot].[Users_Logon] TO [zzp_service]
 GO
