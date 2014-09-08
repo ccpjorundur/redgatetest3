@@ -1,0 +1,12 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [pilot].[Testing_B]
+AS
+  SET NOCOUNT ON
+
+  PRINT 'pilot.Testing_B'
+GO
+GRANT EXECUTE ON  [pilot].[Testing_B] TO [zzp_service]
+GO
