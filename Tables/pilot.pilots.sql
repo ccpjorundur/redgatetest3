@@ -8,7 +8,8 @@ CREATE TABLE [pilot].[pilots]
 [logonCount] [int] NOT NULL CONSTRAINT [DF__pilots__logonCou__440B1D61] DEFAULT ((0)),
 [logonSeconds] [int] NOT NULL CONSTRAINT [DF__pilots__logonSec__44FF419A] DEFAULT ((0)),
 [visk] [money] NOT NULL CONSTRAINT [DF__pilots__visk__45F365D3] DEFAULT ((0)),
-[userID] [int] NULL
+[userID] [int] NULL,
+[new_column_1] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [pilot].[pilots] ADD CONSTRAINT [pilots_PK] PRIMARY KEY CLUSTERED  ([pilotID]) ON [PRIMARY]
